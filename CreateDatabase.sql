@@ -1,4 +1,4 @@
-drop database golf_competition;
+drop database if exists golf_competition;
 create database golf_competition;
 use golf_competition;
 
