@@ -18,3 +18,7 @@ insert into constructions(serial_number, hardness) values(2, '5 HRC');
 
 insert into clubs(club_number, material, player_social_security_number, construction_serial_number) values('#5', 'Wood', '19980204-3594', 1);
 insert into clubs(club_number, material, player_social_security_number, construction_serial_number) values('#5', 'Wood', '20021203-2574', 2);
+insert into clubs(club_number, material, player_social_security_number, construction_serial_number) values('#5', 'Wood', '19961023-4965', 2);
+
+insert into competition_attendances(competition_name, player_social_security_number) values('Big Golf Cup Skövde', '19980204-3594');
+insert into competition_attendances(competition_name, player_social_security_number) values('Big Golf Cup Skövde', '19961023-4965');

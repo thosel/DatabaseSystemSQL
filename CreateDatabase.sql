@@ -54,9 +54,10 @@ create table competition_attendances(
 )engine=InnoDB;
 
 create table competition_weather_conditions(
+	weather_condition_type varchar(20),
 	competition_name varchar(20),
-    weather_condition_type varchar(20),
     competition_weather_condition_time time,
+    primary key(weather_condition_type),
     foreign key(competition_name) references competitions(competition_name),
     foreign key(weather_condition_type) references weather_conditions(weather_condition_type)
 )engine=InnoDB;
