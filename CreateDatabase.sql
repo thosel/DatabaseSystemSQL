@@ -10,13 +10,13 @@ create table players(
 )engine=InnoDB;
 
 create table competitions(
-	competition_name varchar(20) not null unique,
+	competition_name varchar(20) not null,
     competition_date date not null,
     primary key(competition_name)
 )engine=InnoDB;
 
 create table weather_conditions(
-	weather_condition_type varchar(20) not null unique,
+	weather_condition_type varchar(20) not null,
     wind_speed tinyint,
     primary key(weather_condition_type)
 )engine=InnoDB;
@@ -31,7 +31,7 @@ create table jackets(
 	brand varchar(20) not null,
     size varchar(10),
     material varchar(20),
-    player_social_security_number char(13) not null unique,
+    player_social_security_number char(13) not null,
     primary key(player_social_security_number, brand),
     foreign key(player_social_security_number) references players(social_security_number)
 )engine=InnoDB;
@@ -39,7 +39,7 @@ create table jackets(
 create table clubs(
 	club_number varchar(20) not null,
     material varchar(20) not null,
-    player_social_security_number char(13) not null unique,
+    player_social_security_number char(13) not null,
     construction_serial_number smallint not null,
     primary key(player_social_security_number, club_number),
     foreign key(player_social_security_number) references players(social_security_number),
