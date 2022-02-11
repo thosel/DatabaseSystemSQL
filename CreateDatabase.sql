@@ -49,6 +49,7 @@ create table clubs(
 create table competition_attendances(
 	competition_name varchar(20) not null,
     player_social_security_number char(13) not null,
+    primary key(player_social_security_number, competition_name),
     foreign key(competition_name) references competitions(competition_name),
     foreign key(player_social_security_number) references players(social_security_number)
 )engine=InnoDB;
